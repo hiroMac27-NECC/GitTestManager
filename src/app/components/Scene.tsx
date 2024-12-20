@@ -31,6 +31,26 @@ function TeddyBear() {
         <meshStandardMaterial color="#8B4513" />
       </mesh>
 
+      {/* Arms */}
+      <mesh position={[-1.2, 0.2, 0]} rotation={[0, 0, -0.5]}>
+        <cylinderGeometry args={[0.25, 0.25, 1]} />
+        <meshStandardMaterial color="#8B4513" />
+      </mesh>
+      <mesh position={[1.2, 0.2, 0]} rotation={[0, 0, 0.5]}>
+        <cylinderGeometry args={[0.25, 0.25, 1]} />
+        <meshStandardMaterial color="#8B4513" />
+      </mesh>
+
+      {/* Legs */}
+      <mesh position={[-0.4, -1.2, 0]} rotation={[0, 0, 0.2]}>
+        <cylinderGeometry args={[0.25, 0.25, 1]} />
+        <meshStandardMaterial color="#8B4513" />
+      </mesh>
+      <mesh position={[0.4, -1.2, 0]} rotation={[0, 0, -0.2]}>
+        <cylinderGeometry args={[0.25, 0.25, 1]} />
+        <meshStandardMaterial color="#8B4513" />
+      </mesh>
+
       {/* Nose */}
       <mesh position={[0, 1.1, 0.6]}>
         <sphereGeometry args={[0.2, 32, 32]} />
