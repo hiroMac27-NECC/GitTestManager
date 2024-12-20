@@ -89,15 +89,24 @@ export default function Scene() {
     <div className="flex flex-col items-center">
       <div className="canvas-container">
         <Canvas camera={{ position: [0, 2, 5], fov: 50 }} gl={{ alpha: false }} style={{ background: '#808080' }}>
-          <ambientLight intensity={0.3} />
-          <pointLight position={[10, 10, 10]} intensity={0.5} />
-          <pointLight position={[-10, -10, -10]} intensity={0.3} color="#FFA07A" />
-          <spotLight
-            position={[5, 5, 5]}
-            angle={0.3}
-            penumbra={1}
-            intensity={0.8}
+          <ambientLight intensity={0.2} />
+          {/* メインライト（カメラ側から） */}
+          <directionalLight
+            position={[0, 2, 5]}
+            intensity={1.0}
             castShadow
+          />
+          {/* 左上からの補助光 */}
+          <pointLight 
+            position={[-5, 5, 2]} 
+            intensity={0.4} 
+            color="#FFF"
+          />
+          {/* 右下からの補助光 */}
+          <pointLight 
+            position={[5, -2, -2]} 
+            intensity={0.2} 
+            color="#FFE0B2"
           />
           <TeddyBear />
           <OrbitControls
