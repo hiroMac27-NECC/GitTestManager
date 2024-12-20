@@ -20,7 +20,14 @@ export default function Scene() {
           <coneGeometry args={[1, 2, 32]} />
           <meshStandardMaterial color="#90EE90" /> {/* 黄緑色 */}
         </mesh>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls
+          enableDamping={true}
+          dampingFactor={0.05}
+          rotateSpeed={1.0}
+          autoRotate={true}
+          autoRotateSpeed={2.0}
+          enableZoom={false}
+        />
       </Canvas>
     </div>
   )
