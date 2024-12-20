@@ -18,7 +18,7 @@ export default function Scene() {
   return (
     <div className="flex flex-col items-center">
       <div className="canvas-container">
-        <Canvas>
+        <Canvas camera={{ position: [0, 0, 5] }}>
           <ambientLight intensity={0.5} />
           <pointLight position={[10, 10, 10]} />
           <mesh
@@ -42,6 +42,8 @@ export default function Scene() {
             maxAzimuthAngle={Infinity}
             minPolarAngle={0}
             maxPolarAngle={Math.PI}
+            target={[0, 0, 0]}
+            screenSpacePanning={true}
           />
         </Canvas>
       </div>
