@@ -52,19 +52,25 @@ function TeddyBear() {
       </mesh>
 
       {/* Nose */}
-      <mesh position={[0, 1.1, 0.6]}>
-        <sphereGeometry args={[0.2, 32, 32]} />
+      <mesh position={[0, 1.0, 0.7]}>
+        <sphereGeometry args={[0.15, 32, 32]} />
         <meshStandardMaterial color="#4A2511" />
       </mesh>
 
       {/* Eyes */}
-      <mesh position={[-0.3, 1.3, 0.6]}>
-        <sphereGeometry args={[0.1, 32, 32]} />
+      <mesh position={[-0.25, 1.3, 0.65]}>
+        <sphereGeometry args={[0.08, 32, 32]} />
         <meshStandardMaterial color="black" />
       </mesh>
-      <mesh position={[0.3, 1.3, 0.6]}>
-        <sphereGeometry args={[0.1, 32, 32]} />
+      <mesh position={[0.25, 1.3, 0.65]}>
+        <sphereGeometry args={[0.08, 32, 32]} />
         <meshStandardMaterial color="black" />
+      </mesh>
+
+      {/* Mouth */}
+      <mesh position={[0, 0.85, 0.7]} rotation={[0, 0, 0.5]}>
+        <torusGeometry args={[0.12, 0.03, 16, 32, Math.PI]} />
+        <meshStandardMaterial color="#4A2511" />
       </mesh>
     </group>
   )
