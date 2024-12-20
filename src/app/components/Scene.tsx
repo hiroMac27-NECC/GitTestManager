@@ -88,7 +88,7 @@ export default function Scene() {
   return (
     <div className="flex flex-col items-center">
       <div className="canvas-container">
-        <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
+        <Canvas camera={{ position: [0, 2, 5], fov: 50 }} gl={{ alpha: false }} style={{ background: '#808080' }}>
           <ambientLight intensity={0.3} />
           <pointLight position={[10, 10, 10]} intensity={0.5} />
           <pointLight position={[-10, -10, -10]} intensity={0.3} color="#FFA07A" />
