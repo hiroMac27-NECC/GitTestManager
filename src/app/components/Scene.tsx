@@ -53,23 +53,35 @@ function TeddyBear() {
 
       {/* Nose */}
       <mesh position={[0, 1.0, 0.7]}>
-        <sphereGeometry args={[0.15, 32, 32]} />
+        <sphereGeometry args={[0.12, 32, 32]} />
         <meshStandardMaterial color="#4A2511" />
       </mesh>
 
-      {/* Eyes */}
-      <mesh position={[-0.25, 1.3, 0.65]}>
-        <sphereGeometry args={[0.08, 32, 32]} />
-        <meshStandardMaterial color="black" />
-      </mesh>
-      <mesh position={[0.25, 1.3, 0.65]}>
-        <sphereGeometry args={[0.08, 32, 32]} />
-        <meshStandardMaterial color="black" />
-      </mesh>
+      {/* Eyes with white background */}
+      <group position={[-0.25, 1.3, 0.65]}>
+        <mesh>
+          <sphereGeometry args={[0.12, 32, 32]} />
+          <meshStandardMaterial color="white" />
+        </mesh>
+        <mesh position={[0, 0, 0.05]}>
+          <sphereGeometry args={[0.08, 32, 32]} />
+          <meshStandardMaterial color="black" />
+        </mesh>
+      </group>
+      <group position={[0.25, 1.3, 0.65]}>
+        <mesh>
+          <sphereGeometry args={[0.12, 32, 32]} />
+          <meshStandardMaterial color="white" />
+        </mesh>
+        <mesh position={[0, 0, 0.05]}>
+          <sphereGeometry args={[0.08, 32, 32]} />
+          <meshStandardMaterial color="black" />
+        </mesh>
+      </group>
 
-      {/* Mouth */}
-      <mesh position={[0, 0.85, 0.7]} rotation={[0, 0, 0.5]}>
-        <torusGeometry args={[0.12, 0.03, 16, 32, Math.PI]} />
+      {/* Cute smile */}
+      <mesh position={[0, 0.85, 0.7]} rotation={[0, 0, Math.PI]}>
+        <torusGeometry args={[0.15, 0.03, 16, 32, Math.PI]} />
         <meshStandardMaterial color="#4A2511" />
       </mesh>
     </group>
