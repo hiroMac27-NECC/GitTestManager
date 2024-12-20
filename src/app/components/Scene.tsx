@@ -51,60 +51,24 @@ function TeddyBear() {
         <meshStandardMaterial color="#8B4513" />
       </mesh>
 
-      {/* Inner face (lighter color) */}
-      <mesh position={[0, 1.0, 0.5]}>
-        <sphereGeometry args={[0.6, 32, 32]} />
-        <meshStandardMaterial color="#D2946B" />
-      </mesh>
-
-      {/* Cheeks */}
-      <mesh position={[-0.35, 1.0, 0.7]}>
-        <sphereGeometry args={[0.15, 32, 32]} />
-        <meshStandardMaterial color="#FFB6C1" opacity={0.6} transparent />
-      </mesh>
-      <mesh position={[0.35, 1.0, 0.7]}>
-        <sphereGeometry args={[0.15, 32, 32]} />
-        <meshStandardMaterial color="#FFB6C1" opacity={0.6} transparent />
-      </mesh>
-
       {/* Nose */}
-      <mesh position={[0, 1.0, 0.9]}>
-        <sphereGeometry args={[0.12, 32, 32]} />
+      <mesh position={[0, 1.0, 0.7]}>
+        <sphereGeometry args={[0.15, 32, 32]} />
         <meshStandardMaterial color="#4A2511" />
       </mesh>
 
-      {/* Eyes - kawaii style */}
-      <group position={[-0.25, 1.3, 0.75]}>
-        <mesh>
-          <sphereGeometry args={[0.15, 32, 32]} />
-          <meshStandardMaterial color="white" />
-        </mesh>
-        <mesh position={[0, 0, 0.1]}>
-          <sphereGeometry args={[0.09, 32, 32]} />
-          <meshStandardMaterial color="black" />
-        </mesh>
-        <mesh position={[0.02, 0.02, 0.13]}>
-          <sphereGeometry args={[0.03, 32, 32]} />
-          <meshStandardMaterial color="white" />
-        </mesh>
-      </group>
-      <group position={[0.25, 1.3, 0.75]}>
-        <mesh>
-          <sphereGeometry args={[0.15, 32, 32]} />
-          <meshStandardMaterial color="white" />
-        </mesh>
-        <mesh position={[0, 0, 0.1]}>
-          <sphereGeometry args={[0.09, 32, 32]} />
-          <meshStandardMaterial color="black" />
-        </mesh>
-        <mesh position={[0.02, 0.02, 0.13]}>
-          <sphereGeometry args={[0.03, 32, 32]} />
-          <meshStandardMaterial color="white" />
-        </mesh>
-      </group>
+      {/* Eyes */}
+      <mesh position={[-0.25, 1.3, 0.65]}>
+        <sphereGeometry args={[0.08, 32, 32]} />
+        <meshStandardMaterial color="black" />
+      </mesh>
+      <mesh position={[0.25, 1.3, 0.65]}>
+        <sphereGeometry args={[0.08, 32, 32]} />
+        <meshStandardMaterial color="black" />
+      </mesh>
 
-      {/* Mouth - cute smile */}
-      <mesh position={[0, 0.9, 0.9]} rotation={[0, 0, Math.PI]}>
+      {/* Mouth */}
+      <mesh position={[0, 0.85, 0.7]} rotation={[0, 0, 0.5]}>
         <torusGeometry args={[0.12, 0.03, 16, 32, Math.PI]} />
         <meshStandardMaterial color="#4A2511" />
       </mesh>
